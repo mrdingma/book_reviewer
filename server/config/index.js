@@ -1,5 +1,3 @@
 module.exports = {
-  mongodb: {
-    dsn: "mongodb://localhost:27017/APP_NAME"
-  }
+  TOKEN: "bb70c39bd1f0640363d865252cae3bc3",
 };

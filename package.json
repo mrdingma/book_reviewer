@@ -1,5 +1,5 @@
 {
-  "name": "react_start_mongo",
+  "name": "react_express_starter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -26,7 +26,6 @@
     "express": "^4.15.0",
     "jquery": "^3.4.1",
     "materialize-css": "^1.0.0",
-    "mongoose": "^5.9.3",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.2",
     "react": "^16.10.1",
