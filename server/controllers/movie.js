@@ -1,25 +1,25 @@
-const IssueModel = require("../models/Issue");
+const MovieModel = require("../models/Movie");
 
 async function addNew(data) {
-  const issue = new IssueModel(data);
+  const issue = new MovieModel(data);
   return issue.save();
 }
 
 async function getOne(issueId) {
-  return IssueModel.findOne({ _id: issueId });
+  return MovieModel.findOne({ _id: issueId });
 }
 
 async function deleteOne(issueId) {
-  const result = IssueModel.remove({ _id: issueId });
+  const result = MovieModel.remove({ _id: issueId });
   return result;
 }
 
 async function getAllByUser(userId) {
-  return IssueModel.find({ userId });
+  return MovieModel.find({ userId });
 }
 
 async function getAllByUserAndProject(userId, project) {
-  return IssueModel.find({ userId, project });
+  return MovieModel.find({ userId, project });
 }
 
 async function update(issueId, data) {
@@ -28,7 +28,7 @@ async function update(issueId, data) {
   // if can't find item, throw error
   if (!item) throw new Error("Could not find the requested item");
 
-  Object.keys(data).forEach(key => {
+  Object.keys(data).forEach((key) => {
     item[key] = data[key];
   });
 
@@ -41,5 +41,5 @@ module.exports = {
   update,
   deleteOne,
   getAllByUser,
-  getAllByUserAndProject
+  getAllByUserAndProject,
 };

@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from "react";
 
-const App = props => {
-  const [isDashboardView, setIsDashboardView] = useState();
+import Movies from "./Movies.jsx";
+import Add from "./Add.jsx";
+
+const App = (props) => {
+  const [movieList, setMovieList] = useState([]);
+
+  const addMovie = function (movie) {
+    // TODO: check if duplicate
+    setMovieList([...movieList, movie]);
+  };
 
   let content = (
     <>
-      <div>hello world</div>
+      <Add setMovieList={setMovieList} />
+      <Movies movieList={movieList} />
     </>
   );
 

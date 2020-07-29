@@ -1,8 +1,8 @@
 const express = require("express");
-// const issuesRoute = require("./issues");
+const moviesRoute = require("./movies");
 
 module.exports = () => {
-  // const router = express.Router();
-  // router.use("/issues", issuesRoute());
-  // return router;
+  const router = express.Router();
+  router.use("/movies", moviesRoute());
+  return router;
 };
