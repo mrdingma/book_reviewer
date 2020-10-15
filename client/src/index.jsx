@@ -1,5 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/App.jsx";
+import BookReviewApp from "./components/BookReviewApp.jsx";
+import data from "./data/fakedata.json";
 
-ReactDOM.render(<App />, document.getElementById("app"));
+const reviews = data.map((el) => {
+  el.reviews = [];
+  return el;
+});
+
+ReactDOM.render(
+  <BookReviewApp reviewsList={reviews} />,
+  document.getElementById("app")
+);
