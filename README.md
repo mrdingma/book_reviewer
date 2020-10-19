@@ -6,7 +6,7 @@ Develop a simple app that will retrieve the books from The New Times and allow a
 reviews for each book. (The user submissions are not submitted to The New Times, but are
 stored and displayed within your app.)
 
-# ow to run the project:
+# How to run the project:
 Install Node and NPM package manager from the official site
 Open terminal and go to the directory of the project
 Run following commands : - npm install - npm start
